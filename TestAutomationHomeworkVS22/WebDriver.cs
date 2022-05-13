@@ -1,25 +1,14 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using OpenQA.Selenium;
 
 namespace TestAutomationHomework
 {
-    public class Tests
+    internal class WebDriver
     {
-        private IWebDriver Driver;
-
-        [SetUp]
-        public void Setup()
-        {
-            Driver = new ChromeDriver();
-        }
-
-        [Test]
-        public void Test1()
-        {
-            Driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
-        }
+        public static IWebDriver Driver { get; set; }
     }
 }
